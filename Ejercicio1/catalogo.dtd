@@ -1,0 +1,11 @@
+<!ELEMENT catalago (libros, revistas, usuarios, prestamos)>
+<!ATTLIST catalago CDATA #REQUIRED>
+
+<!-- LIBROS -->
+<!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo, anio, autores, etiquetas?)>
+<!ATTLIST libro
+    id ID #REQUIRED
+    categoria CDATA #REQUIRED
+    isbn CDATA #REQUIRED
+    paginas CDATA #REQUIRED>
