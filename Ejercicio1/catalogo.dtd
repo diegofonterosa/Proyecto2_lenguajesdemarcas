@@ -1,4 +1,4 @@
-<!ELEMENT catalago (libros, revistas, usuarios, prestamos)>
+<!ELEMENT catalogo (libros, revistas, usuarios, prestamos)>
 <!ATTLIST catalogo CDATA #REQUIRED>
 
 <!-- LIBROS -->
