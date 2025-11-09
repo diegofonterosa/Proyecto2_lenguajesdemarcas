@@ -1,5 +1,5 @@
 <!ELEMENT catalago (libros, revistas, usuarios, prestamos)>
-<!ATTLIST catalago CDATA #REQUIRED>
+<!ATTLIST catalogo CDATA #REQUIRED>
 
 <!-- LIBROS -->
 <!ELEMENT libros (libro+)>
