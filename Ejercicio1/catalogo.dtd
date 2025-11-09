@@ -8,12 +8,12 @@
     id ID #REQUIRED
     categoria CDATA #REQUIRED
     isbn CDATA #REQUIRED
-    paginas CDATA #REQUIRED>
+    paginas CDATA #IMPLIED>
 
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
 <!ELEMENT autores (autor+)>
-<!ELEMENT autor (#PCDATA)>
+<!ELEMENT autor (nombre, orcid?)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT orcid (#PCDATA)>
 <!ELEMENT etiquetas (etiqueta+)>
@@ -24,7 +24,7 @@
 <!ELEMENT revista (titulo, anio)>
 <!ATTLIST revista
     id ID #REQUIRED
-    categoria CDATA #REQUIRED
+    area CDATA #REQUIRED
     issn CDATA #REQUIRED
     numero CDATA #REQUIRED>
 
