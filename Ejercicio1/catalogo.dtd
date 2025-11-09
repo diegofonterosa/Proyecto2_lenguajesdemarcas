@@ -9,3 +9,45 @@
     categoria CDATA #REQUIRED
     isbn CDATA #REQUIRED
     paginas CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT orcid (#PCDATA)>
+<!ELEMENT etiquetas (etiqueta+)>
+<!ELEMENT etiqueta (#PCDATA)>
+
+<!-- REVISTAS -->
+<!ELEMENT revistas (revista+)>
+<!ELEMENT revista (titulo, anio)>
+<!ATTLIST revista
+    id ID #REQUIRED
+    categoria CDATA #REQUIRED
+    issn CDATA #REQUIRED
+    numero CDATA #REQUIRED>
+
+
+<!-- USUARIOS -->
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, email)>
+<!ATTLIST usuario
+    id ID #REQUIRED
+    tipo CDATA #REQUIRED>
+
+<!ELEMENT email (#PCDATA)>
+
+<!-- PRESTAMOS -->
+<!ELEMENT prestamos (prestamo+)>
+<!ELEMENT prestamo (fecha_inicio, fecha_fin?, estado)>
+<!ATTLIST prestamo
+    id ID #REQUIRED
+    itemRef IDREF #REQUIRED
+    usuarioRef IDREF #REQUIRED>
+
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_fin (#PCDATA)>
+<!ELEMENT estado (#PCDATA)>
+
+    

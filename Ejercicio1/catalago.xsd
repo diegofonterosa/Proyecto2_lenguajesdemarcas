@@ -1,1 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="catalago">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libros">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="anio" type="xs:integer"/>
+                            <xs:element name="autores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name:"nombre" type="xs:string"/>
+                                        <xs:element name:"orcid" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="etiquetas" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="etiqueta" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="categoria" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="novela"/>
+                                    <xs:enumeration value="tecnico"/>
+                                    <xs:enumeration value="ciencia"/>
+                                    <xs:enumeration value="arte"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="isbn" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="revistas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="revista" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string"/>
+                                        <xs:element name="anio" type="xs:integer"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                    <xs:attribute name="area" type="xs:string" use="required"/>
+                                    <xs:attribute name="issn" type="xs:string" use="required"/>
+                                    <xs:attribute name="numero" type="xs:integer" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="usuarios">
+                    
+                </xs:element>
+                <xs:element name="prestamos"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
