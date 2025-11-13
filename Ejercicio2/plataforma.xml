@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plataforma SYSTEM "plataforma.dtd">
+<plataforma>
+    <cursos>
+        <curso id="C1">
+            <titulo>Curso 1</titulo>
+            <nivel>Basico</nivel>
+            <modalidad>Online</modalidad>
+            <horas>20 horas</horas>
+        </curso>
+    </cursos>
+
+    <alumnos>
+        <alumno id="A1">
+            <nombre>Alumno 1</nombre>
+            <email>a1@example.com</email>
+        </alumno>
+    </alumnos>
+
+    <matriculas>
+        <matricula id="M1" alumnoRef="A1" cursoRef="C1">
+            <fecha_alta>13/11/2025</fecha_alta>
+            <estado>Activa</estado>
+        </matricula>
+    </matriculas>
+
+    <evaluaciones>
+        <evaluacion id="E1" matriculaRef="M1">
+            <instrumento>Examen</instrumento>
+            <convocatoria>Ordinaria</convocatoria>
+            <nota>8</nota>
+        </evaluacion>
+    </evaluaciones>
+    
+</plataforma>
