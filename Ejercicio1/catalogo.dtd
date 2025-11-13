@@ -12,10 +12,12 @@
 
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
+
 <!ELEMENT autores (autor+)>
 <!ELEMENT autor (nombre, orcid?)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT orcid (#PCDATA)>
+
 <!ELEMENT etiquetas (etiqueta+)>
 <!ELEMENT etiqueta (#PCDATA)>
 
