@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plataforma SYSTEM "plataforma.dtd">
-<plataforma>
+<plataforma fecha_publicacion="2025-11-13">
 
     <cursos>
         <curso id="C001" codigo="ASIR-25">
@@ -8,9 +8,11 @@
             <nivel>Ciclo Superior</nivel>
             <modalidad>Online</modalidad>
             <horas>2000 horas</horas>
-            <modulos clave="M01">
-                <nombre>Gestión de redes</nombre>
-                <horas>300 horas</horas>
+            <modulos >
+                <modulo clave="M01">
+                    <nombre>Gestión de redes</nombre>
+                    <horas>300 horas</horas>
+                </modulo>
             </modulos>
         </curso>
     </cursos>
