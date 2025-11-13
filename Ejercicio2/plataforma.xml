@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plataforma SYSTEM "plataforma.dtd">
 <plataforma>
+
     <cursos>
-        <curso id="C1">
-            <titulo>Curso 1</titulo>
-            <nivel>Basico</nivel>
+        <curso id="C001" codigo="ASIR-25">
+            <titulo>ASIR</titulo>
+            <nivel>Ciclo Superior</nivel>
             <modalidad>Online</modalidad>
-            <horas>20 horas</horas>
+            <horas>2000 horas</horas>
+            <modulos clave="M01">
+                <nombre>Gestión de redes</nombre>
+                <horas>300 horas</horas>
+            </modulos>
         </curso>
     </cursos>
 
     <alumnos>
-        <alumno id="A1">
-            <nombre>Alumno 1</nombre>
+        <alumno id="A001" nif="12345678A">
+            <nombre>Diego Pérez Fonterosa</nombre>
             <email>a1@example.com</email>
+            <telefono>5600123456</telefono>
         </alumno>
     </alumnos>
 
     <matriculas>
-        <matricula id="M1" alumnoRef="A1" cursoRef="C1">
+        <matricula id="M001" alumnoRef="A001" cursoRef="C001">
             <fecha_alta>13/11/2025</fecha_alta>
             <estado>Activa</estado>
         </matricula>
     </matriculas>
 
     <evaluaciones>
-        <evaluacion id="E1" matriculaRef="M1">
+        <evaluacion id="E001" matriculaRef="M001">
             <instrumento>Examen</instrumento>
             <convocatoria>Ordinaria</convocatoria>
             <nota>8</nota>
         </evaluacion>
     </evaluaciones>
-    
+
 </plataforma>
